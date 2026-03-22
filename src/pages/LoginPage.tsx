@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import { login } from '../services/authAPI';
 import { useAuth } from '../store/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -26,11 +26,8 @@ export default function LoginPage() {
     setError('');
 
     try {
-      const res = await axios.post('http://localhost:3000/auth/login', {
-        username,
-        password,
-      });
-      loginUser(res.data.access_token);
+      const data = await login({ username, password });
+      loginUser(data.access_token);
       navigate('/');
     } catch (err: any) {
       setError(err.response?.data?.message || 'Login failed. Please check credentials.');
