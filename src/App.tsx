@@ -26,6 +26,7 @@ const RootRedirect = () => {
 
 import AuditLogs from './pages/AuditLogs';
 import ReportsPage from './pages/ReportsPage';
+import MasterUpload from './pages/MasterUpload';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
             <Route path="/users" element={<AdminRoute><MasterData type="users" /></AdminRoute>} />
             <Route path="/audit-logs" element={<AdminRoute><AuditLogs /></AdminRoute>} />
             <Route path="/reports" element={<AdminRoute><ReportsPage /></AdminRoute>} />
+            <Route path="/master-upload" element={<AdminRoute><MasterUpload /></AdminRoute>} />
 
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

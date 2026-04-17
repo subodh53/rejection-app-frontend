@@ -11,7 +11,8 @@ import {
     Clock,
     BarChart4,
     ChevronLeft,
-    ChevronRight
+    ChevronRight,
+    Upload
 } from 'lucide-react';
 import { useAuth } from '../store/AuthContext';
 
@@ -19,6 +20,7 @@ const navItems = [
     { name: 'Dashboard', path: '/', icon: LayoutDashboard },
     { name: 'Data Entry', path: '/entries', icon: ClipboardList },
     { name: 'Reports', path: '/reports', icon: BarChart4 },
+    { name: 'Bulk Upload', path: '/master-upload', icon: Upload },
     { name: 'Stages', path: '/stages', icon: Layers },
     { name: 'Parts', path: '/parts', icon: Box },
     { name: 'Categories', path: '/categories', icon: Tags },
